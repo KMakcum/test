@@ -1,0 +1,415 @@
+/*
+Theme Name: Life Chef theme
+Author: Life Chef team
+Description: Main theme for Life Chef.
+Version: 0.2.6
+*/
+
+/* Loader styles */
+body.loader-no-scroll {
+	overflow: hidden;
+}
+.preload-image {
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.catalog-loader,
+.main-loader {
+	position: relative;
+}
+.catalog-loader:before,
+.main-loader:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 13;
+	background: rgba(255,255,255,0.3);
+}
+.main-loader:before {
+	background: rgba(0,0,0,0.7);
+}
+.loader-container {
+	display: none;
+}
+.catalog-loader .loader-container,
+.main-loader .loader-container {
+    position: fixed;
+    padding: 20px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 20px;
+    top: calc(50vh - 90px);
+    left: calc(50vw - 90px);
+}
+.main-loader .loader-container {
+	justify-content: center;
+	align-items: center;
+}
+.catalog-loader .loader-image {
+    background-image: url(./assets/img/loaders/products.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto auto 0 auto;
+    width: 100%;
+    max-width: 100px;
+    height: 100%;
+    max-height: 100px;
+}
+.catalog-loader .loader-text {
+	margin-top: auto;
+	font-size: 12px;
+	text-align: center;
+}
+.main-loader .loader-image {
+	background-image: url(./assets/img/loaders/main.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    max-width: 60px;
+    height: 100%;
+    max-height: 60px;
+}
+/* Remove cart page overlay */
+.woocommerce-cart .blockOverlay {
+	display: none !important;
+}
+/* /Loader styles */
+
+/* TMP styles - hide reviews section on home page */
+.home .reviews {
+	display: none;
+}
+/* \TMP styles - hide reviews section on home page */
+
+.woocommerce-pagination {
+	display: none;
+}
+
+#ship-to-different-address,
+.checkout-form-hidden-field {
+	display: none;
+}
+
+.woocommerce-billing-fieldset.hide-billing {
+	display: none;
+}
+
+/* Temp style */
+.message--full.message--success {
+	color: #34a34f;
+	background-color: #cdf7ca;
+}
+
+.rateit button.rateit-reset {
+	display: none !important;
+}
+
+.feedback-btn {
+	position: fixed;
+	top: 50%;
+	right: 48px;
+	display: inline-block;
+	max-width: 100%;
+	padding: 17.5px 24px;
+	touch-action: manipulation;
+	vertical-align: middle;
+	font-size: 14px;
+	line-height: 1.25;
+	text-align: center;
+	white-space: normal;
+	word-wrap: normal;
+	color: #fff;
+	background-color: #0a6629;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transform: rotate(-90deg);
+	transform-origin: 96% 0;
+	transition: 0.3s ease;
+	z-index: 99999;
+}
+
+.feedback-btn:hover {
+	background-color: #17843c;
+}
+
+.data__logo {
+	margin: 0 auto 25px !important;
+}
+
+form.recomended {
+	display: inherit;
+}
+
+.offer-card__body {
+	z-index: unset;
+}
+
+.added_to_cart.wc-forward {
+	display: none;
+}
+
+#js-promo-code .woocommerce-message {
+	text-align: center;
+}
+
+
+.button[disabled] {
+	pointer-events: none;
+}
+
+.description__left {
+	margin: 0 0 0.6em 0;
+	width: 100%;
+}
+
+.title-center {
+	margin: 0 auto !important;
+}
+
+.picker-error {
+	outline: 1px solid #f00;
+}
+
+/* Hide woo "required" stars on checkout page */
+.woocommerce-checkout abbr.required {
+	display: none;
+}
+.cart .head-shop-list__title a,
+.cart .head-shop-list__notice > a {
+	color: #252728;
+}
+.cart .head-shop-list__title a:hover,
+.cart .head-shop-list__notice > a:hover {
+	color: #6d7073;
+	text-decoration: underline;
+}
+.products-filter__bottom {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+/* Color fix for first shipment checkout */
+.checkout-list__item .checkout-item__delivery-info {
+	color: #6d7073;
+}
+
+/* Cards for checkout payment step */
+.checkout-item__body .card-data__number.mastercard:before {
+    background-image: url(./assets/img/payment-systems/mastercard.svg);
+}
+.checkout-item__body .card-data__number.visa:before {
+    background-image: url(./assets/img/payment-systems/visa.svg);
+}
+.checkout-item__body .card-data__number.visaelectron:before {
+    background-image: url(./assets/img/payment-systems/visaelectron.svg);
+}
+.checkout-item__body .card-data__number.amex:before {
+    background-image: url(./assets/img/payment-systems/amex.svg);
+}
+.checkout-item__body .card-data__number.dankort:before {
+    background-image: url(./assets/img/payment-systems/dankort.svg);
+}
+.checkout-item__body .card-data__number.dinersclub:before {
+    background-image: url(./assets/img/payment-systems/dinersclub.svg);
+}
+.checkout-item__body .card-data__number.discover:before {
+    background-image: url(./assets/img/payment-systems/discover.svg);
+}
+.checkout-item__body .card-data__number.elo:before {
+    background-image: url(./assets/img/payment-systems/elo.svg);
+}
+.checkout-item__body .card-data__number.hipercard:before {
+    background-image: url(./assets/img/payment-systems/hipercard.svg);
+}
+.checkout-item__body .card-data__number.jcb:before {
+    background-image: url(./assets/img/payment-systems/jcb.svg);
+}
+.checkout-item__body .card-data__number.maestro:before {
+    background-image: url(./assets/img/payment-systems/maestro.svg);
+}
+.checkout-item__body .card-data__number.troy:before {
+    background-image: url(./assets/img/payment-systems/troy.svg);
+}
+.checkout-item__body .card-data__number.unionpay:before {
+    background-image: url(./assets/img/payment-systems/unionpay.svg);
+}
+
+/* Disabled color scheme for checkout zip and state */
+.woocommerce-billing-fields input[disabled],
+.woocommerce-billing-fields input[readonly],
+.woocommerce-billing-fields .select-disabled,
+.woocommerce-shipping-fields .select-disabled,
+.woocommerce-shipping-fields input[disabled],
+.woocommerce-shipping-fields input[readonly],
+.update-delivery-address-modal input[readonly],
+.update-delivery-address-modal .select-disabled,
+.update-billing-address-modal input[readonly],
+.update-billing-address-modal .select-disabled {
+	color: #888888;
+    border-color: #888888;
+    background-color: #f5f6f7;
+	/*color: #e1e3e6;
+    border-color: #e1e3e6;*/
+}
+body.woocommerce-order-received .main-nav__location {
+	color: #bec1c4;
+}
+body.woocommerce-order-received .main-nav__location:after {
+	border-color: #bec1c4 transparent transparent;
+}
+body.woocommerce-order-received .main-nav__location svg,
+body.woocommerce-order-received .main-nav__location:hover svg {
+	fill: #bec1c4;
+}
+.show-overlay.open-meal-plan body {
+	overflow: hidden!important;
+}
+.woocommerce-cart .content a:not(.button) {
+	 border-bottom: none;
+}
+@media screen and (min-width: 992px) {
+	.woocommerce-order-received .questions {
+		padding: 24px;
+	}
+}
+@media screen and (max-width: 1440px) {
+	.modal-survey .step-right .step-content .modal-common {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.woocommerce-checkout .fieldset__list .fields-list__item .field-wr__message {
+		margin-bottom: 10px;
+	}
+}
+/* Fix chat and Feedback position */
+@media screen and (max-width: 1024px) {
+	/* Feedback */
+	/*html body.meal-plan-exist iframe[name="us-entrypoint-buttonV2"] {
+		bottom: calc(50vh - 16px) !important;
+		right: -37px !important;
+		transform: rotate(-90deg)!important;
+	}*/
+
+	/* Chat */
+	.meal-plan-exist .intercom-launcher,
+	.meal-plan-exist .intercom-launcher-frame {
+		bottom: 164px!important;
+	}
+	.meal-plan-exist .intercom-namespace .intercom-h1w3zb {
+		right: 60px;
+	}
+}
+@media screen and (max-width: 992px) {
+	.modal-survey .step-right .step-content .modal-common {
+		padding: 25px 40px 40px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	/* Feedback */
+	/*.meal-plan-exist iframe[name="us-entrypoint-buttonV2"] {
+
+	}*/
+
+	/* Chat */
+	.meal-plan-exist .intercom-launcher,
+	.meal-plan-exist .intercom-launcher-frame {
+		bottom: 144px!important;
+	}
+	.meal-plan .head-meal-plan {
+		padding-left: 40px;
+	}
+}
+@media screen and (max-width: 576px) {
+	body .status-page__icon {
+		position: inherit;
+	}
+	.product-card .product-slider-big__button svg {
+		display: block;
+	}
+	main.product_cat-meals .product-card__section.zendesk-q-and-a {
+		padding-bottom: 40px;
+	}
+	.survey-container .step-right__content {
+		width: 440px;
+	}
+	.survey-container .step-actions {
+		justify-content: space-between;
+	}
+}
+@media screen and (max-width: 425px) {
+	.woocommerce-checkout .fieldset__list .fields-list__item .field-wr__message {
+		margin-bottom: 12px;
+	}
+	.survey-container .step-right__content {
+		width: 300px;
+	}
+}
+@media screen and (max-width: 375px) {
+	body .form-add-to-cart .nice-number {
+		margin-right: 12px;
+	}
+	.survey-container .step-right__content {
+		width: 275px;
+	}
+	.form-add-to-cart__button {
+		padding: 11.5px 6px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.page-template-page-groceries .product-list .product-item {
+		max-width: 160px;
+	}
+	.page-template-page-groceries .product-list .product-item .price-box__old {
+		font-size: 10px;
+	}
+	.page-template-page-groceries .product-list .product-item .price-box__discount {
+		font-size: 10px;
+	}
+	.product-item__info .add-button--added .add-button__icon {
+		right: 8px;
+	}
+	.product-item__info .product-item__button:not(.button--plus).product-item__button--added {
+		background-image: none;
+	}
+	.product-card .add-button__txt-1 {
+		font-size: 10px;
+	}
+	.survey-container .step-right__content {
+		width: 222px;
+	}
+}
+.button--plus.add-button--added {
+	width: 40px;
+	height: 40px;
+	padding-right: 40px;
+}
+
+.button--plus.add-button--added .icon-plus {
+	display: none;
+}
+
+.button--plus.add-button--added .add-button__icon {
+	right: 12px;
+}
+
+.option-item__field:checked~.option-item__box .option-item__name {
+	color: #fff;
+}
+body .add-button--added .add-button__icon {
+	right: 8px;
+}
+body .product-item__button.add-button--added {
+	background-image: unset;
+}

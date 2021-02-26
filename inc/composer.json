@@ -1,0 +1,11 @@
+{
+    "require": {
+        "zendesk/zendesk_api_client_php": "^2.2",
+        "skagarwal/google-places-api": "^1.7",
+        "elasticsearch/elasticsearch": "^7.0",
+        "easypost/easypost-php": "3.4.5",
+        "elasticsearch/elasticsearch": "^7.0",
+        "dompdf/dompdf": "^1.0",
+        "phpoffice/phpspreadsheet": "^1.14"
+    }
+}
