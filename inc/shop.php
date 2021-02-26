@@ -733,7 +733,7 @@ class SolutionFactoryShop {
             return 12;
         }
 
-        return 11;
+        return 11123;
     }
 
     /**
